@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>A collection of simple extension methods that I'm tired of duplicating!</Title>
+    <Version>1.0.0</Version>
+    <PackageId>Wrak.Extensions</PackageId>
+    <Authors>William Rakocy</Authors>
+    <Product>Wrak.Extensions</Product>
+    <Description>A collection of simple extension methods that I'm tired of duplicating!</Description>
+    <PackageProjectUrl>https://github.com/wrakocy/Extensions</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/wrakocy/Extensions</RepositoryUrl>
+    <PackageTags>netcore;c#;extensions;extension methods;</PackageTags>
+  </PropertyGroup>
+
+</Project>

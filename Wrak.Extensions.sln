@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrak.Extensions", "Wrak.Extensions\Wrak.Extensions.csproj", "{E7993267-106D-46CA-8773-669F4C2C2D75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D468EACF-7BF5-45F6-A773-222CB3541AE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1570E62A-E23D-42E0-B010-D7AF01D0223B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{E6A5508A-EA30-415F-86EB-AEB5D6F3CE30}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".azure", ".azure", "{45C51FF2-78B0-497C-98EC-75FB78723C2C}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrak.Extensions.Tests", "Wrak.Extensions.Tests\Wrak.Extensions.Tests.csproj", "{644CE848-09CF-44E1-BFDA-15974CE0DDD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7993267-106D-46CA-8773-669F4C2C2D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7993267-106D-46CA-8773-669F4C2C2D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7993267-106D-46CA-8773-669F4C2C2D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7993267-106D-46CA-8773-669F4C2C2D75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644CE848-09CF-44E1-BFDA-15974CE0DDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644CE848-09CF-44E1-BFDA-15974CE0DDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644CE848-09CF-44E1-BFDA-15974CE0DDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644CE848-09CF-44E1-BFDA-15974CE0DDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7993267-106D-46CA-8773-669F4C2C2D75} = {D468EACF-7BF5-45F6-A773-222CB3541AE8}
+		{644CE848-09CF-44E1-BFDA-15974CE0DDD3} = {1570E62A-E23D-42E0-B010-D7AF01D0223B}
+	EndGlobalSection
+EndGlobal
