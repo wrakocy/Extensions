@@ -7,7 +7,7 @@ public class DateTimeExtensions_ToLongDateTimeString
     [InlineData("1/3/22 12:30:45", "Monday January 3, 2022, 12:30 PM")]
     [InlineData("1/3/22 3:30:45 PM", "Monday January 3, 2022, 03:30 PM")]
     [InlineData("1/10/22 12:30:45 PM", "Monday January 10, 2022, 12:30 PM")]
-    [InlineData("10/12/21 14:30:45", "Tuesday October 11, 2021, 02:30 PM")]
+    [InlineData("10/12/21 14:30:45", "Tuesday October 12, 2021, 02:30 PM")]
     [InlineData("", "--")]
     [InlineData(null, "--")]
     public void ReturnCorrectFormatAndHandleNulls(string? dateString, string expectedResult)
