@@ -23,12 +23,12 @@ steps:
   displayName: 'Build Solution'
   inputs:
     command: 'build'
-    projects: 'Wrak.RandomData.sln'
+    projects: 'Wrak.Extensions.sln'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: Run Tests
   inputs:
     command: test
-    projects: '**/Wrak.RandomData.Tests.csproj'
+    projects: '**/Wrak.Extensions.Tests.csproj'
     arguments: '--configuration $(buildConfiguration) --no-build --no-restore'
