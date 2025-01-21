@@ -3,13 +3,13 @@
 public class ULongExtensions_ToCommaDelimitedString
 {
     [Theory]
-    [InlineData(1L, "1")]
-    [InlineData(10L, "10")]
-    [InlineData(100L, "100")]
-    [InlineData(1000L, "1,000")]
-    [InlineData(10000L, "10,000")]
-    [InlineData(100000L, "100,000")]
-    [InlineData(1000000L, "1,000,000")]
+    [InlineData(1UL, "1")]
+    [InlineData(10UL, "10")]
+    [InlineData(100UL, "100")]
+    [InlineData(1000UL, "1,000")]
+    [InlineData(10000UL, "10,000")]
+    [InlineData(100000UL, "100,000")]
+    [InlineData(1000000UL, "1,000,000")]
     [InlineData(null, "--")]
     public void Format(ulong? i, string expected)
     {
