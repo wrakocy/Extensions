@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>A collection of simple extension methods that I'm tired of duplicating!</Title>
-    <Version>1.3.0</Version>
+    <Version>1.4.0</Version>
     <PackageId>Wrak.Extensions</PackageId>
     <Authors>William Rakocy</Authors>
     <Product>Wrak.Extensions</Product>

@@ -2,6 +2,11 @@
 
 public static class TimeSpanExtensions
 {
+    public static string ToHoursMinutesString(this TimeSpan ts)
+    {
+        return $"{Truncate(ts.TotalHours)}h {Truncate(ts.Minutes)}m";
+    }
+
     public static string ToMinutesSecondsString(this TimeSpan ts)
     {
         return $"{Truncate(ts.TotalMinutes)}m {Truncate(ts.Seconds)}s";
