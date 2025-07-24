@@ -5,11 +5,11 @@ namespace Wrak.Extensions.Tests;
 public class EnumExtensions_ToDisplayName
 {
     [Theory]
-    [InlineData(FakeEnum.Foo, "Foo", false)]
-    [InlineData(FakeEnum.Foo, "Foo", true)]
-    [InlineData(FakeEnum.FooBar, "Foo Bar", false)]
-    [InlineData(FakeEnum.FooBar, "FB", true)]
-    public void ReturnNameWithOrWithoutDisplayAnnotation(FakeEnum enumVal, string expectedResult, bool useShortName)
+    [InlineData(FakeDisplayNameEnum.Foo, "Foo", false)]
+    [InlineData(FakeDisplayNameEnum.Foo, "Foo", true)]
+    [InlineData(FakeDisplayNameEnum.FooBar, "Foo Bar", false)]
+    [InlineData(FakeDisplayNameEnum.FooBar, "FB", true)]
+    public void ReturnNameWithOrWithoutDisplayAnnotation(FakeDisplayNameEnum enumVal, string expectedResult, bool useShortName)
     {
         Assert.Equal(expectedResult, enumVal.ToDisplayName(useShortName));
     }
@@ -17,10 +17,10 @@ public class EnumExtensions_ToDisplayName
     [Fact]
     public void ReturnLongNameByDefault()
     {
-        Assert.Equal("Foo Bar", FakeEnum.FooBar.ToDisplayName());
+        Assert.Equal("Foo Bar", FakeDisplayNameEnum.FooBar.ToDisplayName());
     }
 
-    public enum FakeEnum
+    public enum FakeDisplayNameEnum
     {
         Foo,
 
