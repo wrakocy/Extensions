@@ -16,6 +16,13 @@ public static class EnumExtensions
         return string.Empty;
     }
 
+    public static string ToGroupName(this Enum value)
+    {
+        if (value != null)
+            return GetGroupName(value) ?? string.Empty;
+        return string.Empty;
+    }
+
     private static string? GetDisplayName(Enum value, bool useShortName)
     {
         var displayAttribute = value
@@ -26,5 +33,16 @@ public static class EnumExtensions
             .FirstOrDefault();
 
         return useShortName ? displayAttribute?.GetShortName() : displayAttribute?.GetName() ?? null;
+    }
+
+    private static string? GetGroupName(Enum value)
+    {
+        var memberInfo = value.GetType().GetMember(value.ToString()).FirstOrDefault();
+        if (memberInfo == null) return null;
+
+        var displayAttribute = memberInfo.GetCustomAttributes<DisplayAttribute>().FirstOrDefault();
+        if (displayAttribute == null) return null;
+
+        return displayAttribute.GetGroupName();
     }
 }
