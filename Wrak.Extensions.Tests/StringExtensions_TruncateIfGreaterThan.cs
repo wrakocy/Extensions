@@ -29,14 +29,14 @@ public class StringExtensions_TruncateIfGreaterThan
     {
         string input = "this is a very long test string";
         string result = input.TruncateIfGreaterThan(10);
-        Assert.Equal("...est string", result);
+        Assert.Equal("this is a ...", result);
     }
 
     [Fact]
     public void ReturnsTruncatedStringWithCustomPrefix()
     {
-        string input = "this is a very long test string";
+        string input = "This is a very long test string";
         string result = input.TruncateIfGreaterThan(10, "--");
-        Assert.Equal("--est string", result);
+        Assert.Equal("This is a --", result);
     }
 }
