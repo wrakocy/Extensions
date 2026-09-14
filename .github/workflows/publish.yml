@@ -46,10 +46,10 @@ jobs:
           dotnet-version: "9.0.x"
 
       - name: Restore
-        run: dotnet restore Wrak.Extensions.sln
+        run: dotnet restore Wrak.Extensions.slnx
 
       - name: Pack
-        run: dotnet pack Wrak.Extensions.sln -c Release --no-restore -p:Version=${{ steps.version.outputs.version }} -o artifacts
+        run: dotnet pack Wrak.Extensions.slnx -c Release --no-restore -p:Version=${{ steps.version.outputs.version }} -o artifacts
 
       - name: NuGet login (OIDC -> short-lived API key)
         uses: NuGet/login@v1

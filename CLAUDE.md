@@ -8,7 +8,7 @@ to NuGet as `Wrak.Extensions`.
 ## Build & test
 
 ```
-dotnet build Wrak.Extensions.sln
+dotnet build Wrak.Extensions.slnx
 dotnet test Wrak.Extensions.Tests/Wrak.Extensions.Tests.csproj
 ```
 
