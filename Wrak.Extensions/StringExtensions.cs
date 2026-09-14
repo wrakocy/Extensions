@@ -14,4 +14,14 @@ public static class StringExtensions
     {
         return DateTime.TryParse(val, out var date) ? date : null;
     }
+
+    public static bool IsNullOrEmpty(this string? val)
+    {
+        return string.IsNullOrEmpty(val);
+    }
+
+    public static bool IsNullOrWhiteSpace(this string? val)
+    {
+        return string.IsNullOrWhiteSpace(val);
+    }
 }
