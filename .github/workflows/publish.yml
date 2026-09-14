@@ -14,7 +14,11 @@ permissions:
   contents: read
 
 jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
   publish:
+    needs: build
     runs-on: ubuntu-latest
     environment: release
     permissions:
@@ -41,17 +45,11 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
-      - name: Verify formatting
-        run: dotnet format Wrak.Extensions.sln --verify-no-changes
-
-      - name: Build
-        run: dotnet build Wrak.Extensions.sln -c Release
-
-      - name: Test
-        run: dotnet test Wrak.Extensions.Tests/Wrak.Extensions.Tests.csproj -c Release --no-build
+      - name: Restore
+        run: dotnet restore Wrak.Extensions.sln
 
       - name: Pack
-        run: dotnet pack Wrak.Extensions.sln -c Release -p:Version=${{ steps.version.outputs.version }} -o artifacts
+        run: dotnet pack Wrak.Extensions.sln -c Release --no-restore -p:Version=${{ steps.version.outputs.version }} -o artifacts
 
       - name: NuGet login (OIDC -> short-lived API key)
         uses: NuGet/login@v1
